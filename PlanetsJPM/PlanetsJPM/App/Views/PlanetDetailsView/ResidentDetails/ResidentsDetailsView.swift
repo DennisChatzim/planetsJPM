@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResidentsDetailsView: View {
     
-    @ObservedObject var themeService: ThemeService = ThemeService.shared
+    @EnvironmentObject var themeService: ThemeService
     @ObservedObject var model: ResidentsDetailsViewModel
     var planetName: String
     

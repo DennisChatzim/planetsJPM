@@ -12,7 +12,7 @@ class ThemeService: ObservableObject, Codable, Equatable, Hashable {
     static let shared = ThemeService()
     
     @Published var isDarkThemeActive = false
-    @Published var selectedTheme: Theme = .dark
+    @Published var selectedTheme: Theme = .unknown
     
     var bordersColours: [Color] = [Color.blue,
                                   Color.yellow,
@@ -25,6 +25,20 @@ class ThemeService: ObservableObject, Codable, Equatable, Hashable {
         $selectedTheme.map { $0 == .dark ? true : false }.assign(to: &$isDarkThemeActive)
     }
     
+    func setThemeFromSystem(_ systemTheme: ColorScheme) {
+                
+        if selectedTheme == .unknown {
+            if systemTheme == .dark {
+                selectedTheme = .dark
+            } else {
+                selectedTheme = .light
+            }
+        } else {
+            selectedTheme = systemTheme == .dark ? .dark : .light
+        }
+        
+    }
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(isDarkThemeActive)
         hasher.combine(selectedTheme)
@@ -60,12 +74,13 @@ class ThemeService: ObservableObject, Codable, Equatable, Hashable {
 
 enum Theme: String, CaseIterable {
     
-    case light, dark
+    case light, dark, unknown
     
     var mainTextColour: Color {
         switch self {
         case .light: return Color.init(white: 0.0, opacity: 1.0)
         case .dark: return Color.init(white: 1.0, opacity: 1.0)
+        case .unknown: return Color.init(white: 1.0, opacity: 1.0)
         }
     }
     
@@ -73,6 +88,7 @@ enum Theme: String, CaseIterable {
         switch self {
         case .light: return .light
         case .dark: return .dark
+        case .unknown: return .dark
         }
     }
     
@@ -80,6 +96,7 @@ enum Theme: String, CaseIterable {
         switch self {
         case .light: return .white
         case .dark: return .black
+        case .unknown: return .black
         }
     }
 
@@ -87,6 +104,7 @@ enum Theme: String, CaseIterable {
         switch self {
         case .light: return Color.init(white: 0.93)
         case .dark: return Color.init(white: 0.07)
+        case .unknown: return Color.init(white: 0.07)
         }
     }
         

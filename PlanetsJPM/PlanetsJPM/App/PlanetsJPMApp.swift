@@ -10,11 +10,17 @@ import SwiftUI
 @main
 struct PlanetsJPMApp: App {
 
+    @StateObject var themeService = ThemeService.shared
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some Scene {
         WindowGroup {
             PlanetsView()
+                .environmentObject(themeService)
         }
     }
+    
+        
 }
 
 /*
@@ -46,6 +52,6 @@ Suggestions:
  1.. Dark theme support
  2.. Custom spinner based on earth and moon icons
  3.. Navigation to the planet details screen
- 4.. Navigation to Residence list deatils of each planet
- 
+ 4.. Navigation to Residence list details of each planet
+ 5.. Drag to refresh planets feature in main screen
  */

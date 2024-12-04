@@ -75,7 +75,6 @@ final class DataServiceTests: XCTestCase {
         let decoder = JSONDecoder()
         let decodedPlanets = try? decoder.decode(AllPlanetsDTO.self, from: storedData!)
         
-        
         XCTAssertEqual(decodedPlanets, mockPlanets, "Decoded data should match the original data")
     }
     
@@ -86,6 +85,10 @@ final class DataServiceTests: XCTestCase {
         let encoder = JSONEncoder()
         let data = try! encoder.encode(mockPlanets)
         mockUserDefaults.set(data, forKey: DataService.planetsStoreKey)
+        
+        let expectation = self.expectation(description: "Wait for async operation")
+        wait(for: [expectation], timeout: 1.5)
+
         dataService.loadPlanetsFromCache()
         
         XCTAssertEqual(dataService.latestPlanets.value, mockPlanets, "Data should be loaded correctly from cache")

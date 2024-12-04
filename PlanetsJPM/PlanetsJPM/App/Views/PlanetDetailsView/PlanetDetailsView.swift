@@ -9,8 +9,7 @@ import SwiftUI
 
 struct PlanetDetailsView: View {
     
-    @ObservedObject var themeService: ThemeService = ThemeService.shared
-    
+    @EnvironmentObject var themeService: ThemeService
     var planet: PlanetDTO
     var cellHeight: CGFloat = 44.0
     var horizontalPadding: CGFloat = 16.0
@@ -102,8 +101,7 @@ struct PlanetDetailsView: View {
                     }
                 }
                 
-                NavigationLink(destination: ResidentsDetailsView(themeService: themeService,
-                                                                 model: ResidentsDetailsViewModel(residentsUrls: planet.residents ?? [], dataService: DataService.shared),
+                NavigationLink(destination: ResidentsDetailsView(model: ResidentsDetailsViewModel(residentsUrls: planet.residents ?? [], dataService: DataService.shared),
                                                                  planetName: planet.name ?? "Unknown planet name?"),
                                isActive: $navigateToResidents,
                                label: { EmptyView() })

@@ -50,12 +50,12 @@ struct CircularLoaderView: View {
     
 }
 
-struct CircularLoaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        CircularLoaderView(theme: ThemeService.shared.selectedTheme)
-    }
-}
-
+//struct CircularLoaderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CircularLoaderView(theme: ThemeService.shared.selectedTheme)
+//    }
+//}
+//
 
 #Preview {
     CircularLoaderView(theme: ThemeService.shared.selectedTheme)

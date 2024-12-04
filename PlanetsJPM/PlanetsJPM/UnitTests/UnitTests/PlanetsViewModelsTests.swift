@@ -44,7 +44,7 @@ final class PlanetsViewModelTests: XCTestCase {
         viewModel.getLatestPlanets(withDemoDelay: 0.0)
         
         // Assert
-        //XCTAssertEqual(viewModel.currentPlanets, mockPlanets, "currentPlanets should be updated with the mock data.")
+        // XCTAssertEqual(viewModel.currentPlanets, mockPlanets, "currentPlanets should be updated with the mock data.")
         XCTAssertFalse(viewModel.isLoading, "isLoading should be false after fetching planets.")
         XCTAssertFalse(viewModel.showAlert, "showAlert should not be shown on success.")
     }

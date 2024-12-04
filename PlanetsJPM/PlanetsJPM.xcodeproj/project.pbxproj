@@ -197,6 +197,7 @@
 			children = (
 				92EEA9E12CEBD95E0065C9A5 /* DataService */,
 				92EEA9892CEB83D00065C9A5 /* NetworkService */,
+				92EEA9722CEB80AF0065C9A5 /* DTOsEnums */,
 				92EEA9A62CEB899B0065C9A5 /* ThemeService.swift */,
 			);
 			path = Services;
@@ -334,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				92EEA9782CEB80AF0065C9A5 /* DataService.swift */,
-				92EEA9722CEB80AF0065C9A5 /* DTOsEnums */,
 			);
 			path = DataService;
 			sourceTree = "<group>";
