@@ -58,7 +58,7 @@
 		92EEA9EE2CEBEDED0065C9A5 /* ResidentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEA9EC2CEBEDE90065C9A5 /* ResidentDTO.swift */; };
 		92EEA9EF2CEBEDED0065C9A5 /* ResidentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEA9EC2CEBEDE90065C9A5 /* ResidentDTO.swift */; };
 		92EEA9F22CEBFE360065C9A5 /* ResidentsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEA9F12CEBFE350065C9A5 /* ResidentsDetailsViewModel.swift */; };
-		92EEA9F52CEC003F0065C9A5 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEA9F32CEC003A0065C9A5 /* CellView.swift */; };
+		92EEA9F52CEC003F0065C9A5 /* ReusableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEA9F32CEC003A0065C9A5 /* ReusableViews.swift */; };
 		92EEA9F62CEC06D40065C9A5 /* PlanetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EEA9A02CEB865B0065C9A5 /* PlanetsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,7 +113,7 @@
 		92EEA9EA2CEBEDA00065C9A5 /* ResidentsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentsDetailsView.swift; sourceTree = "<group>"; };
 		92EEA9EC2CEBEDE90065C9A5 /* ResidentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentDTO.swift; sourceTree = "<group>"; };
 		92EEA9F12CEBFE350065C9A5 /* ResidentsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentsDetailsViewModel.swift; sourceTree = "<group>"; };
-		92EEA9F32CEC003A0065C9A5 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		92EEA9F32CEC003A0065C9A5 /* ReusableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -276,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				92EEA9B32CEB9F2A0065C9A5 /* ColourfulBorder.swift */,
-				92EEA9F32CEC003A0065C9A5 /* CellView.swift */,
+				92EEA9F32CEC003A0065C9A5 /* ReusableViews.swift */,
 				92EEA9E72CEBE90A0065C9A5 /* BounceTapModifier.swift */,
 				92EEA9A22CEB894B0065C9A5 /* LoaderView */,
 			);
@@ -502,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92EEA9F52CEC003F0065C9A5 /* CellView.swift in Sources */,
+				92EEA9F52CEC003F0065C9A5 /* ReusableViews.swift in Sources */,
 				92EEA9E82CEBE9140065C9A5 /* BounceTapModifier.swift in Sources */,
 				92EEA9B52CEB9F330065C9A5 /* ColourfulBorder.swift in Sources */,
 				92EEA9812CEB80AF0065C9A5 /* PlanetDTO.swift in Sources */,
